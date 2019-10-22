@@ -1,29 +1,37 @@
 {
   "name": "fileuploader",
   "version": "1.0.0",
-  "main": "./src/main.js",
+  "main": "src/main.js",
   "license": "MIT",
+  "scripts": {
+    "start": "npm-run-all -p start:*",
+    "start:frontend": "parcel --log-level 5 -d './src/assets/parcel' --public-url './assets/parcel' ./src/frontend/entry.tsx",
+    "start:electron": "electron src/main.js"
+  },
   "dependencies": {
-    "aws-sdk": "^2.553.0"
+    "aws-sdk": "^2.553.0",
+    "parcel": "^1.12.4",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
     "electron": "^7.0.0",
-    "electron-builder": "^21.2.0"
+    "electron-builder": "^21.2.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.6.4"
   },
   "build": {
-    "appId": "idw-electron-builder",
-    "productName": "DIW - digital information wall",
-    "copyright": "Copyright teamLab inc. All rights reserved",
+    "appId": "file-uploader",
+    "productName": "file-uploader",
+    "copyright": "Copyright ArakiTakai. All rights reserved",
     "win": {
       "target": "zip"
     },
     "mac": {
       "target": "zip"
-    },
-    "files": [
-      "./src/electron/index.html",
-      "./src/electron/index.js",
-      "./src/electron/assets/entry.js"
-    ]
+    }
   }
 }
