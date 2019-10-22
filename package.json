@@ -1,0 +1,29 @@
+{
+  "name": "fileuploader",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.553.0"
+  },
+  "devDependencies": {
+    "electron": "^7.0.0",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "idw-electron-builder",
+    "productName": "DIW - digital information wall",
+    "copyright": "Copyright teamLab inc. All rights reserved",
+    "win": {
+      "target": "zip"
+    },
+    "mac": {
+      "target": "zip"
+    },
+    "files": [
+      "./src/electron/index.html",
+      "./src/electron/index.js",
+      "./src/electron/assets/entry.js"
+    ]
+  }
+}
