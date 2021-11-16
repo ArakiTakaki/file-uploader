@@ -9,7 +9,7 @@
     "start:electron": "electron src/main.js"
   },
   "dependencies": {
-    "aws-sdk": "^2.553.0",
+    "aws-sdk": "^2.814.0",
     "parcel": "^1.12.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
